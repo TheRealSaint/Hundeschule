@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hundeschule
 {
-    public class Hund
+    public class Hund : StateContext
     {
         public string name;
         public string laut;
@@ -30,7 +30,7 @@ namespace Hundeschule
 
         }
                 
-        public void setAktuellerZustand(string Zustand)
+        public void SetAktuellerZustand(string Zustand)
         {
             this.aktuellerZustand = Zustand;
         }

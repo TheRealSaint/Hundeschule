@@ -31,6 +31,7 @@
             this.btn_add_dog = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btn_status_anzeigen = new System.Windows.Forms.Button();
+            this.btn_kommando = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_add_dog
@@ -65,12 +66,23 @@
             this.btn_status_anzeigen.UseVisualStyleBackColor = true;
             this.btn_status_anzeigen.Click += new System.EventHandler(this.btn_status_anzeigen_Click);
             // 
+            // btn_kommando
+            // 
+            this.btn_kommando.Location = new System.Drawing.Point(13, 98);
+            this.btn_kommando.Name = "btn_kommando";
+            this.btn_kommando.Size = new System.Drawing.Size(75, 37);
+            this.btn_kommando.TabIndex = 3;
+            this.btn_kommando.Text = "Kommando";
+            this.btn_kommando.UseVisualStyleBackColor = true;
+            this.btn_kommando.Click += new System.EventHandler(this.btn_kommando_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1079, 450);
+            this.Controls.Add(this.btn_kommando);
             this.Controls.Add(this.btn_status_anzeigen);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btn_add_dog);
@@ -85,6 +97,7 @@
         private System.Windows.Forms.Button btn_add_dog;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btn_status_anzeigen;
+        private System.Windows.Forms.Button btn_kommando;
     }
 }
 

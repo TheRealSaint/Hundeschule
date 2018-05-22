@@ -6,38 +6,11 @@ using System.Threading.Tasks;
 
 namespace Hundeschule
 {
-    class Liegen : iHundStatus
+    class Liegen : IHundStatus
     {
-        private Hund hund;
-
-        //Konstruktor
-        public Liegen(Hund einHund)
+        public void Change(StateContext context)
         {
-            this.hund = einHund;
-        }
-
-        public void stehen()
-        {
-            //string status = "steht";
-            //hund.setAktuellerZustand(status);
-        }
-
-        public void laufen()
-        {
-            //string status = "läuft";
-            //hund.setAktuellerZustand(status);
-        }
-
-        public void liegen()
-        {
-            string status = "liegt";
-            hund.setAktuellerZustand(status);
-        }
-
-        public void sitzen()
-        {
-            //string status = "sitzt";
-            //hund.setAktuellerZustand(status);
+            context.State = new Sitzen();
         }
     }
 }

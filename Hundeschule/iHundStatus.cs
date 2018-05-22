@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Hundeschule
 {
-    public interface iHundStatus
+    public interface IHundStatus
     {
-        void stehen();
-        void sitzen();
-        void liegen();
-        void laufen();
+        void Change(StateContext context);        
     }
 }
