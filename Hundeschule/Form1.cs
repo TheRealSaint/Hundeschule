@@ -37,9 +37,19 @@ namespace Hundeschule
         {
             int index = myDogList.Count();
             Hund newDog = new Hund();
-            newDog.SetAktuellerZustand("sitzt");
+            newDog.SetAktuellerZustand("sitzt");                     
 
             newDog.State = new Liegen();
+            
+            //Zufaelligen Status des Hundes einstellen
+            Random rnd = new Random();
+            int Zufallszahl = rnd.Next(0, 3);
+
+            for (int i = Zufallszahl; i < myDogList.Count; i++)
+            {
+                newDog.Change();
+            }
+
             myDogList.Add(newDog);
             string dog = index + " " + newDog.HundBeschreibung(newDog);
             listBox1.Items.Add(dog);
@@ -62,14 +72,14 @@ namespace Hundeschule
             foreach (StateContext objekt in myDogList)
             {                
                 objekt.Change();
-                listBox1.Items.Clear();                
-                
+                listBox1.Items.Clear();
+
                 foreach (Hund hund in myDogList)
-                {                    
+                {
                     listBox1.Items.Add(hund.name + " " + hund.State);
                 }
-            }            
+            }
             listBox1.Refresh();
-        }
+        }        
     }
 }
